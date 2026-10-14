@@ -973,6 +973,18 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #articles .section-bottom-cta a{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:165px;min-width:165px;min-height:40px;padding:9px 15px;border:1px solid #c5d9cb;border-radius:999px;background:#ffffff8c;color:#1d4b3e;font:600 12.5px/1.35 "Inter",Arial,sans-serif;text-align:center;text-decoration:none}
 #articles .section-bottom-cta a:hover{background:#e6eee8}
 @media(max-width:650px){#articles .article-carousel-controls{margin-bottom:12px}}
+
+/* V16: proportional Menu Hari Ini image alongside Zakat card */
+@media(min-width:901px){
+ #smart .menu-panel .menu-feature{gap:12px;padding-top:0}
+ #smart .menu-panel .menu-feature img{height:clamp(185px,17vw,235px);object-fit:cover;object-position:center;border-radius:15px}
+ #smart .menu-panel .menu-feature>div{gap:6px}
+ #smart .menu-panel .menu-feature h4{font-size:clamp(25px,2.1vw,32px)}
+ #smart .menu-panel .smart-bottom{margin-top:8px}
+}
+@media(min-width:651px) and (max-width:900px){
+ #smart .menu-panel .menu-feature img{height:clamp(220px,29vw,285px)}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
