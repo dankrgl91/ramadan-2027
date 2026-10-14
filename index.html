@@ -1230,6 +1230,23 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #mosques .mosque-content h2{font-family:"Lora",Georgia,serif!important;font-weight:400!important;font-size:clamp(42px,4.9vw,72px);line-height:1.12;letter-spacing:-.045em}
 #mosques .mosque-content h2 em{font-family:"Instrument Serif",Georgia,serif!important;font-weight:400!important;font-style:italic}
 @media(max-width:650px){#mosques .mosque-content h2{font-size:clamp(40px,8.7vw,59px)}}
+
+/* V28: Masjid mirrors Live Streaming with media on the left */
+@media(min-width:901px){
+ #mosques .mosque-redesign{grid-template-columns:minmax(0,1.28fr) minmax(0,.72fr);gap:55px;align-items:center}
+}
+#mosques .mosque-redesign{max-width:1200px}
+#mosques .mosque-photo{width:100%;height:auto!important;aspect-ratio:16/10;border-radius:12px;min-width:0}
+#mosques .mosque-photo img{inset:0;object-fit:cover}
+#mosques .mosque-content{background:transparent!important;padding:0!important;align-items:flex-start;justify-content:center}
+#mosques .mosque-content h2{font-size:clamp(42px,4.9vw,72px)!important}
+@media(max-width:900px){
+ #mosques .mosque-redesign{grid-template-columns:1fr;gap:28px}
+ #mosques .mosque-photo{aspect-ratio:16/10;height:auto!important}
+}
+@media(max-width:650px){
+ #mosques .mosque-content h2{font-size:clamp(40px,8.7vw,59px)!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
