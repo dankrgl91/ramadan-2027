@@ -907,6 +907,17 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 }
 #smart .prayer-panel .prayer-widget-footer{justify-content:flex-start}
 #smart .prayer-panel .prayer-month-trigger{margin-left:0;margin-right:auto}
+
+/* V10: keep Waktu lainnya truly expandable despite matched card heights */
+#smart .prayer-extra[hidden]{display:none!important}
+#smart .prayer-extra:not([hidden]){display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));height:auto;overflow:visible}
+#smart .prayer-panel{overflow:visible}
+@media(min-width:901px){
+ #smart .smart-grid{grid-auto-rows:auto}
+ #smart .smart-grid:has(#prayerExtra:not([hidden]))>.prayer-panel,
+ #smart .smart-grid:has(#prayerExtra:not([hidden]))>.quran-panel{height:auto;min-height:0;align-self:stretch}
+}
+@media(max-width:480px){#smart .prayer-extra:not([hidden]){grid-template-columns:1fr}}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
