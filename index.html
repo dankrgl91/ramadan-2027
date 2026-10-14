@@ -1008,6 +1008,14 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #articles .article-body:after,#articles .article-card:after{display:none!important}
 #articles .section-bottom-cta a{width:auto;min-width:194px;min-height:46px;padding:12px 23px;font-size:14px}
 @media(max-width:650px){#articles .section-head{align-items:flex-end;gap:10px}#articles .section-head .article-carousel-controls{margin-bottom:4px}#articles .article-carousel-buttons{gap:6px}}
+
+/* V19: carousel arrows aligned to subtitle baseline; remove remaining separators */
+#articles .section-head{align-items:flex-end!important}
+#articles .section-head .article-carousel-controls{align-self:flex-end!important;margin:0 0 1px!important}
+#articles .section-head>div>p{margin-bottom:0!important}
+#articles .article-card,#articles .article-body,#articles .article-grid,#articles .article-carousel-track{border-bottom:0!important}
+#articles .article-body::before,#articles .article-body::after,#articles .article-card::before,#articles .article-card::after{border:0!important;box-shadow:none!important}
+@media(max-width:650px){#articles .section-head .article-carousel-controls{margin-bottom:0!important}}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
