@@ -918,6 +918,15 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #smart .smart-grid:has(#prayerExtra:not([hidden]))>.quran-panel{height:auto;min-height:0;align-self:stretch}
 }
 @media(max-width:480px){#smart .prayer-extra:not([hidden]){grid-template-columns:1fr}}
+
+/* V11: extra prayer times open by default, clean trigger, and compact sponsor slots */
+#smart .prayer-details-toggle{gap:0}
+#smart .smart-head>.smart-brand-slot{flex:0 0 25%;width:25%;min-width:116px;max-width:210px;margin-left:auto;box-sizing:border-box}
+#smart .smart-brand-caption{white-space:normal;text-wrap:balance}
+#smart .smart-brand-placeholder{white-space:normal;text-wrap:balance}
+@media(max-width:650px){
+ #smart .smart-head>.smart-brand-slot{flex-basis:27%;width:27%;min-width:100px;max-width:145px}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -951,8 +960,8 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 <div class="prayer-time-item highlight"><span>Maghrib <small hidden="" id="prayerMaghribHint">(Berbuka)</small></span><strong id="timeMaghrib">17:46</strong></div>
 <div class="prayer-time-item"><span>Isya</span><strong id="timeIsya">18:56</strong></div>
 </div>
-<button aria-controls="prayerExtra" aria-expanded="false" class="prayer-details-toggle" id="prayerMoreToggle" type="button">Waktu lainnya <svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg></button>
-<div class="prayer-extra" hidden="" id="prayerExtra">
+<button aria-controls="prayerExtra" aria-expanded="true" class="prayer-details-toggle" id="prayerMoreToggle" type="button">Waktu lainnya</button>
+<div class="prayer-extra" id="prayerExtra">
 <div><span>Zuhur</span><strong id="timeDzuhur">11:39</strong></div>
 <div><span>Asar</span><strong id="timeAshar">14:45</strong></div>
 </div>
