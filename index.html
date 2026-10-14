@@ -1497,6 +1497,38 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #smart .quran-panel .verse-reflection{padding:12px 15px!important}
 #smart .quran-panel .smart-bottom{margin-top:8px!important}
 @media(max-width:650px){#smart .quran-panel .verse-content{padding:16px!important}}
+
+/* V41 — genuinely compact paired top cards, preserving all prayer functions */
+@media(min-width:901px){
+ #smart .smart-grid{align-items:stretch}
+ #smart .smart-grid>.prayer-panel,
+ #smart .smart-grid>.quran-panel{min-height:0!important;height:auto!important;align-self:stretch}
+ #smart .prayer-panel{justify-content:flex-start!important}
+ #smart .prayer-panel .prayer-widget-footer{margin-top:3px!important;padding-top:3px!important}
+ #smart .quran-panel .smart-bottom{margin-top:auto!important;padding-top:8px}
+}
+#smart .prayer-panel.glass-widget,#smart .quran-panel.glass-widget{gap:7px!important;padding:16px!important}
+#smart .prayer-panel .smart-head,#smart .quran-panel .smart-head{margin-bottom:0!important}
+#smart .prayer-panel .prayer-controls{gap:7px!important}
+#smart .prayer-panel .prayer-countdown{min-height:0!important;padding:7px 11px!important}
+#smart .prayer-panel .prayer-times{gap:6px!important}
+#smart .prayer-panel .prayer-time-item{padding:7px 9px!important;gap:4px!important}
+#smart .prayer-panel .prayer-time-item strong{font-size:clamp(15px,1.4vw,18px)!important}
+#smart .prayer-panel .prayer-details-toggle{padding:2px 0!important}
+#smart .prayer-panel .prayer-extra{gap:6px!important;margin-top:0!important}
+#smart .prayer-panel .prayer-extra>div{padding:6px 9px!important}
+#smart .prayer-panel .prayer-week{padding-top:4px!important;gap:4px!important}
+#smart .prayer-panel .prayer-day{min-height:33px!important;padding:3px 2px!important}
+#smart .prayer-panel .prayer-month-trigger{min-height:38px!important}
+#smart .quran-panel .verse-content{flex:0 1 auto!important;gap:9px!important;padding:14px!important}
+#smart .quran-panel .verse-arabic{line-height:1.56!important;font-size:clamp(29px,2.8vw,37px)!important}
+#smart .quran-panel .verse-translation{line-height:1.5!important}
+#smart .quran-panel .verse-reflection{padding:10px 13px!important}
+#smart .quran-panel .smart-bottom a{min-height:38px!important}
+@media(max-width:650px){
+ #smart .prayer-panel.glass-widget,#smart .quran-panel.glass-widget{padding:16px!important;gap:9px!important}
+ #smart .quran-panel .verse-arabic{font-size:clamp(29px,7.5vw,36px)!important;line-height:1.7!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
