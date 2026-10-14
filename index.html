@@ -1472,9 +1472,13 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #mosques .mosque-hero .mosque-description{font-size:14px!important}
  #mosques .mosque-hero-credit{left:16px;bottom:13px;font-size:10px}
 }
+
+/* V39: final Masjid hero is the visual closing section before Footer */
+#livestream.live-section{padding-bottom:clamp(48px,5vw,72px)!important}
+#mosques.mosque-section{padding-top:clamp(48px,5vw,72px)!important;padding-bottom:clamp(42px,4vw,55px)!important}
 </style></head><body>
 
-<header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
+<header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
 <main>
 <section class="journey" id="journey"><div class="sticky"><video id="hero" muted="muted" playsinline="" webkit-playsinline="" preload="auto" poster="ramadan-hero-poster.jpg" src="assets/ramadan-hero-scrub_xMEx.mp4" aria-label="Perjalanan visual Ramadan dari senja hingga kebersamaan" class="is-ready"></video><div class="shade"></div><div class="copy"><div class="hero-story scene-enter" id="heroStory" aria-live="off"><h1 id="headline"><span class="hero-line-primary"><span id="heroLinePrimary">Saat Senja</span> <em id="heroLineLast">Tiba,</em></span><span class="hero-line-accent" id="heroLineAccent">ada rindu yang kembali terasa. Ramadan datang membawa kenangan yang akrab.</span></h1></div></div><div class="hint" aria-label="Scroll untuk menjelajah"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-mouse" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="7"></rect><path class="scroll-wheel" d="M12 6v4"></path></svg><span>Scroll</span><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-down hint-chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></div></div></section>
 <section aria-labelledby="smartTitle" class="smart-section new-section" id="smart"><div class="inner">
@@ -1546,6 +1550,14 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   </div>
 </section>
 
+<section class="live-section new-section" id="livestream" aria-labelledby="liveTitle">
+  <div class="inner">
+    
+    <div class="live-layout"><div class="live-heading"><span class="section-kicker">TAYANGAN PILIHAN</span><h2 id="liveTitle">Live <em>Streaming</em></h2><p>Ikuti tayangan pilihan Liputan6. Siaran langsung hadir sesuai jadwal.</p></div><div class="live-stage" id="liveStage"><div class="live-poster" id="livePoster"><span class="broadcast-label">LIPUTAN6</span><button type="button" id="loadStream" class="broadcast-play" aria-label="Putar siaran Liputan6"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-play" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 14 9-14 9z"></path></svg></button><div class="live-stage-bottom"><strong>Video Liputan6</strong><span>PUTAR VIDEO</span></div></div></div></div>
+    <div class="section-bottom-cta"><a href="https://www.youtube.com/watch?v=PvaMJFybKSE" target="_blank" rel="noopener noreferrer">Lihat di YouTube <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div>
+  </div>
+</section>
+
 <section class="mosque-section new-section" id="mosques" aria-labelledby="mosquesTitle">
   <div class="inner mosque-redesign mosque-hero">
     <div class="mosque-content">
@@ -1557,14 +1569,6 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
       <a id="mosqueResultsLink" class="mosque-results" target="_blank" rel="noopener noreferrer" hidden>Buka hasil pencarian masjid</a>
     </div>
     <span class="mosque-hero-credit">Masjid Agung Kota Blitar</span>
-  </div>
-</section>
-
-<section class="live-section new-section" id="livestream" aria-labelledby="liveTitle">
-  <div class="inner">
-    
-    <div class="live-layout"><div class="live-heading"><span class="section-kicker">TAYANGAN PILIHAN</span><h2 id="liveTitle">Live <em>Streaming</em></h2><p>Ikuti tayangan pilihan Liputan6. Siaran langsung hadir sesuai jadwal.</p></div><div class="live-stage" id="liveStage"><div class="live-poster" id="livePoster"><span class="broadcast-label">LIPUTAN6</span><button type="button" id="loadStream" class="broadcast-play" aria-label="Putar siaran Liputan6"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-play" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 14 9-14 9z"></path></svg></button><div class="live-stage-bottom"><strong>Video Liputan6</strong><span>PUTAR VIDEO</span></div></div></div></div>
-    <div class="section-bottom-cta"><a href="https://www.youtube.com/watch?v=PvaMJFybKSE" target="_blank" rel="noopener noreferrer">Lihat di YouTube <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div>
   </div>
 </section>
 
