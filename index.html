@@ -1551,6 +1551,69 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #livestream .section-bottom-cta,#livestream .live-stage-bottom span{display:none!important}
 #livestream .inner>hr,#livestream hr{display:none!important}
 #livestream .section-bottom-cta::before,#livestream .section-bottom-cta::after{display:none!important}
+
+/* V45 — final mobile polish across all sections + Liputan6 video thumbnail */
+#livestream .live-poster{
+ background:linear-gradient(180deg,rgba(8,28,22,.22) 0%,rgba(8,28,22,.26) 45%,rgba(8,28,22,.80) 100%),
+ url("https://i.ytimg.com/vi/GGAnG2tLSR0/hqdefault.jpg") center / cover no-repeat!important;
+}
+#livestream .live-poster .broadcast-play,#livestream .live-poster .broadcast-label,
+#livestream .live-poster .live-stage-bottom{position:relative;z-index:2}
+#livestream .live-stage-bottom span{display:none!important}
+@media(max-width:900px){
+ html{scroll-padding-top:76px}
+ body{overflow-x:hidden}
+ .inner,#smart>.inner,#articles>.inner,#videos>.inner,#livestream>.inner{max-width:100%;box-sizing:border-box}
+ #smart .smart-grid{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"prayer" "quran" "zakat" "menu"!important;gap:16px!important}
+ #smart .smart-grid>*{min-width:0!important}
+ #smart .prayer-panel,#smart .quran-panel{height:auto!important;min-height:0!important}
+ #smart .prayer-panel .prayer-widget-footer{position:static!important;margin-top:8px!important;padding:8px 0 0!important}
+ #articles .articles-grid,#videos .video-grid{min-width:0}
+ #livestream .live-layout{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;align-items:start!important}
+ #livestream .live-stage{width:100%;aspect-ratio:16/9;height:auto;min-width:0}
+ #livestream .live-stage iframe{display:block;width:100%;height:100%;aspect-ratio:16/9;border:0}
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-hero{width:min(92%,1200px)!important}
+}
+@media(max-width:650px){
+ html{scroll-padding-top:68px}
+ #smart.smart-section,#articles.articles-section,#videos.videos-section,#livestream.live-section{padding-top:58px!important;padding-bottom:62px!important}
+ #smart .smart-grid{gap:14px!important}
+ #smart .smart-grid>.glass-widget{box-sizing:border-box;width:100%;max-width:100%;border-radius:18px!important}
+ #smart .smart-head{flex-wrap:wrap;gap:12px}
+ #smart .prayer-controls{min-width:0;max-width:100%}
+ #smart .prayer-date-actions{min-width:0}
+ #smart .prayer-week{min-width:0}
+ #smart .prayer-day{min-width:0}
+ #smart .prayer-panel .prayer-widget-footer{justify-content:flex-start!important}
+ #smart .prayer-panel .prayer-month-trigger{margin-left:0!important}
+ #smart .quran-panel .verse-content{min-width:0}
+ #smart .quran-panel .verse-arabic{overflow-wrap:anywhere}
+ #articles .section-head,#videos .section-head{min-width:0}
+ #articles .section-head h2,#videos .section-head h2{line-height:1.1!important}
+ #articles .article-art{height:auto!important;aspect-ratio:16/11}
+ #videos .video-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+ #videos .video-card{min-height:290px!important}
+ #livestream .live-layout{gap:22px!important}
+ #livestream .live-heading h2{font-size:clamp(42px,10vw,62px)!important;line-height:1.1!important}
+ #livestream .live-heading>p{font-size:14px;line-height:1.75;margin:14px 0 0}
+ #livestream .live-stage,#livestream .live-poster{aspect-ratio:16/9!important;min-height:0!important;border-radius:16px!important}
+ #livestream .broadcast-play{width:76px!important;height:76px!important}
+ #livestream .live-stage-bottom strong{font-size:clamp(19px,5vw,26px)!important}
+ #mosques.mosque-section{padding:42px 0!important}
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-hero{
+   width:92%!important;min-height:470px!important;padding:66px 22px!important;border-radius:18px!important
+ }
+ #mosques .mosque-hero h2{font-size:clamp(42px,10vw,60px)!important}
+ #mosques .mosque-hero .mosque-description{font-size:14px!important;line-height:1.7!important}
+ #mosques .mosque-hero .mosque-search-btn{max-width:100%;white-space:normal}
+ .footer-inner{flex-direction:column!important;align-items:flex-start!important;gap:20px!important}
+}
+@media(max-width:380px){
+ #smart .smart-grid>.glass-widget{padding:14px!important}
+ #livestream .live-stage-bottom strong{font-size:18px!important}
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-hero{padding-inline:18px!important}
+}
+@media(prefers-reduced-motion:reduce){#livestream .broadcast-play{transition:none}}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
