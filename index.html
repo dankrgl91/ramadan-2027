@@ -1259,6 +1259,22 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #mosques.mosque-section{padding:64px 0 32px!important}
  #livestream.live-section{padding:32px 0 70px!important}
 }
+
+/* V30: matching Ramadan Smart two-column proportions */
+@media(min-width:901px){
+ #mosques .mosque-redesign,
+ #livestream .live-layout{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:18px!important;
+  align-items:center!important;
+ }
+}
+#mosques .mosque-redesign{width:100%!important;max-width:none!important}
+#mosques .mosque-photo,#livestream .live-stage{width:100%;min-width:0;aspect-ratio:16/10}
+@media(max-width:900px){
+ #mosques .mosque-redesign,#livestream .live-layout{grid-template-columns:1fr!important;gap:24px!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
