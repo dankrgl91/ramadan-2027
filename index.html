@@ -1420,6 +1420,58 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #mosques .mosque-content{padding:23px 12px 19px!important}
 }
 @media(prefers-reduced-motion:reduce){#mosques .mosque-photo img{transition:none}#mosques .mosque-photo:hover img{transform:none}}
+
+/* V38: Masjid Terdekat — cinematic full-background hero */
+#mosques.mosque-section{display:block!important;min-height:0!important;padding:clamp(64px,6vw,90px) 0!important;background:#edf3ef!important}
+#mosques.mosque-section>.inner.mosque-redesign.mosque-hero{
+ position:relative!important;isolation:isolate;box-sizing:border-box;
+ display:flex!important;flex-direction:column;align-items:center!important;justify-content:center!important;
+ width:min(90%,1200px)!important;max-width:1200px!important;
+ min-height:clamp(500px,45vw,600px)!important;
+ padding:clamp(48px,6vw,90px) 24px!important;margin:0 auto!important;
+ border:0!important;border-radius:24px!important;overflow:hidden!important;
+ background:#17362f url("https://images.unsplash.com/photo-1748195855204-6a77618590ee?fm=jpg&ixlib=rb-4.1.0&q=85&w=1800") center 46% / cover no-repeat!important;
+ box-shadow:0 18px 52px rgba(16,40,31,.16)!important;
+}
+#mosques .mosque-hero::before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(180deg,rgba(13,33,27,.56),rgba(11,32,26,.70));
+}
+#mosques .mosque-hero .mosque-content{
+ display:flex!important;flex-direction:column;align-items:center!important;justify-content:center!important;
+ width:100%!important;max-width:790px!important;min-width:0!important;
+ padding:0!important;gap:0!important;background:transparent!important;
+ text-align:center!important;position:relative;z-index:1;
+}
+#mosques .mosque-hero .section-kicker{
+ color:#d7e7db!important;font-size:12px!important;letter-spacing:.17em!important;
+ margin:0 0 22px!important;
+}
+#mosques .mosque-hero h2{
+ color:#fff9ee!important;font-size:clamp(48px,5.8vw,86px)!important;
+ line-height:1.12!important;margin:0 0 22px!important;max-width:none!important;text-align:center!important;
+}
+#mosques .mosque-hero h2 em{color:#dfc08b!important}
+#mosques .mosque-hero .mosque-description{
+ color:#edf5ef!important;opacity:.95;max-width:610px!important;text-align:center!important;
+ margin:0 auto 30px!important;font-size:clamp(14px,1.2vw,17px)!important;line-height:1.75!important;
+}
+#mosques .mosque-hero .mosque-search-btn{
+ background:#f6f0e6!important;border:1px solid #f6f0e6!important;color:#183d32!important;
+ min-height:49px!important;padding:13px 30px!important;margin:0!important;border-radius:999px!important;
+ box-shadow:0 8px 25px rgba(0,0,0,.16)!important;font:600 14px/1.4 "Inter",Arial,sans-serif!important;
+}
+#mosques .mosque-hero .mosque-search-btn:hover{background:#e4ebe0!important;border-color:#e4ebe0!important}
+#mosques .mosque-hero .mosque-status{color:#e0ebe3!important;opacity:.9;margin:18px auto 0!important;max-width:560px!important;text-align:center!important;font-size:12px!important}
+#mosques .mosque-hero .mosque-results{color:#fff6e8!important;margin:12px auto 0!important;text-align:center!important;text-decoration:underline}
+#mosques .mosque-hero .mosque-results[hidden]{display:none!important}
+#mosques .mosque-hero-credit{position:absolute;bottom:18px;left:22px;z-index:1;color:#e2e9df;font:500 11px/1.4 "Inter",Arial,sans-serif;opacity:.85}
+@media(max-width:650px){
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-hero{min-height:470px!important;border-radius:18px!important;padding:60px 20px!important;background-position:center center!important}
+ #mosques .mosque-hero h2{font-size:clamp(44px,10vw,62px)!important}
+ #mosques .mosque-hero .mosque-description{font-size:14px!important}
+ #mosques .mosque-hero-credit{left:16px;bottom:13px;font-size:10px}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -1494,66 +1546,17 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   </div>
 </section>
 
-<section class="mosque-section new-section"
-  id="mosques" aria-labelledby="mosquesTitle">
-
-  <div class="inner mosque-redesign">
-
-    <div class="mosque-photo">
-      <img
-        src="https://images.unsplash.com/photo-1748195855204-6a77618590ee?fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1400"
-        alt="Masjid Agung Kota Blitar"
-        loading="lazy"
-      />
-      <span class="mosque-photo-label">
-        Masjid Agung Kota Blitar
-      </span>
-    </div>
-
+<section class="mosque-section new-section" id="mosques" aria-labelledby="mosquesTitle">
+  <div class="inner mosque-redesign mosque-hero">
     <div class="mosque-content">
-      <span class="section-kicker">
-        PENCARIAN LOKASI
-      </span>
-
-      <h2 id="mosquesTitle">
-        Masjid <em>Terdekat</em>
-      </h2>
-
-      <p class="mosque-description">
-        Temukan masjid di sekitar Anda
-        dengan mudah untuk beribadah
-        dan menikmati kebersamaan Ramadan.
-      </p>
-
-      <button
-        type="button"
-        id="findMosque"
-        class="mosque-search-btn"
-      >
-        Cari Masjid Terdekat
-      </button>
-
-      <div
-        id="mosqueStatus"
-        class="mosque-status"
-        role="status"
-        aria-live="polite"
-      >
-        Izinkan akses lokasi untuk menemukan
-        masjid di sekitar Anda.
-      </div>
-
-      <a
-        id="mosqueResultsLink"
-        class="mosque-results"
-        target="_blank"
-        rel="noopener noreferrer"
-        hidden
-      >
-        Buka hasil pencarian masjid
-      </a>
-
+      <span class="section-kicker">PENCARIAN LOKASI</span>
+      <h2 id="mosquesTitle">Masjid <em>Terdekat</em></h2>
+      <p class="mosque-description">Temukan masjid di sekitar Anda dengan mudah untuk beribadah dan menikmati kebersamaan Ramadan.</p>
+      <button type="button" id="findMosque" class="mosque-search-btn">Cari Masjid Terdekat</button>
+      <div id="mosqueStatus" class="mosque-status" role="status" aria-live="polite">Izinkan akses lokasi untuk menemukan masjid di sekitar Anda.</div>
+      <a id="mosqueResultsLink" class="mosque-results" target="_blank" rel="noopener noreferrer" hidden>Buka hasil pencarian masjid</a>
     </div>
+    <span class="mosque-hero-credit">Masjid Agung Kota Blitar</span>
   </div>
 </section>
 
