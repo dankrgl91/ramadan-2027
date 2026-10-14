@@ -871,6 +871,31 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #smart .smart-grid>.prayer-panel{justify-content:space-between}
  #smart .prayer-panel .prayer-widget-footer{margin-top:0;padding-top:8px}
 }
+
+/* V8: compact imsakiyah with naturally expanding extra times */
+@media(min-width:901px){
+  #smart .smart-grid{align-items:start}
+  #smart .smart-grid>.prayer-panel,
+  #smart .smart-grid>.quran-panel{height:auto;min-height:0;align-self:start}
+  #smart .prayer-panel{justify-content:flex-start}
+}
+#smart .prayer-panel .prayer-widget-footer{margin-top:6px;padding-top:8px}
+#smart .prayer-panel .prayer-extra[hidden]{display:none!important}
+#smart .prayer-panel .prayer-extra:not([hidden]){margin-top:4px}
+#smart .prayer-month-trigger,
+#smart .quran-panel .smart-bottom a{width:165px;min-width:165px;min-height:40px;padding:9px 15px;font-size:12.5px;line-height:1.35}
+#smart .smart-head p{font-size:clamp(12px,1vw,14px);line-height:1.5}
+#smart .prayer-panel .smart-head p{max-width:none}
+.sticky .hint{left:50%;right:auto;transform:translateX(-50%);text-align:center}
+@media(min-width:901px){
+  header#siteHeader nav{gap:clamp(3px,.55vw,9px)}
+  header#siteHeader nav a{font-size:14px;padding:10px clamp(6px,.75vw,12px)}
+}
+@media(max-width:650px){
+  #smart .prayer-month-trigger,
+  #smart .quran-panel .smart-bottom a{width:165px;min-width:165px;max-width:100%;min-height:40px;font-size:12.5px}
+  .sticky .hint{left:50%;right:auto;transform:translateX(-50%)}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
