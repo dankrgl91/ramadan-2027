@@ -915,6 +915,101 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   }
 }
 
+/* LIVE STREAMING — thumbnail dummy video */
+#livestream .live-poster {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(10, 28, 23, 0.18), rgba(10, 28, 23, 0.55)),
+    url('https://i.ytimg.com/vi/GGAnG2tLSR0/hqdefault.jpg') center center / cover no-repeat !important;
+}
+
+#livestream .live-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 34, 28, 0.10), rgba(14, 34, 28, 0.58));
+  pointer-events: none;
+}
+
+#livestream .live-poster > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* LIVE STREAMING — mobile refinement */
+@media (max-width: 900px) {
+  #livestream .live-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    align-items: start !important;
+  }
+
+  #livestream .live-copy {
+    order: 1;
+  }
+
+  #livestream .live-stage {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #livestream .live-stage,
+  #livestream .live-poster,
+  #livestream .live-stage iframe {
+    min-height: 240px !important;
+    border-radius: 18px !important;
+  }
+
+  #livestream .live-copy h2,
+  #livestream #livestreamTitle {
+    font-size: clamp(42px, 10vw, 58px) !important;
+    line-height: 1.08 !important;
+  }
+
+  #livestream .live-copy p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  #livestream .broadcast-play {
+    width: 84px !important;
+    height: 84px !important;
+  }
+
+  #livestream .broadcast-play svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  #livestream .broadcast-label {
+    font-size: 11px !important;
+    letter-spacing: .12em !important;
+  }
+
+  #livestream .live-stage strong {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+#livestream .live-poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#livestream .live-stage strong {
+  color: #fff8ef;
+  text-shadow: 0 2px 10px rgba(0,0,0,.18);
+}
+
+#livestream .broadcast-label {
+  color: #f4efe6;
+}
  
 </style><style>
 /* V3: Artikel Ramadan carousel — original palette preserved */
