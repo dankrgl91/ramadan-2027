@@ -763,6 +763,159 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   section.new-section .article-card:hover,section.new-section .video-card:hover { transform: none; }
 }
 
+/* MASJID TERDEKAT - REDESIGN */
+
+#mosques.mosque-section {
+  display: block;
+  min-height: 0;
+  padding: clamp(75px, 7vw, 105px) 0;
+  background: #edf3ef;
+  color: #203a38;
+}
+
+#mosques .mosque-redesign {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: clamp(28px, 4vw, 65px);
+}
+
+/* FOTO MASJID */
+
+#mosques .mosque-photo {
+  position: relative;
+  height: 390px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #dce8df;
+}
+
+#mosques .mosque-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#mosques .mosque-photo-label {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(246, 240, 230, .94);
+  color: #203a38;
+  font: 600 12px/1.4 "Inter", sans-serif;
+}
+
+/* KONTEN */
+
+#mosques .mosque-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+}
+
+#mosques .section-kicker {
+  color: #477c72;
+}
+
+#mosques .mosque-content h2 {
+  margin: 0;
+  font-size: clamp(45px, 4.8vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  color: #203a38;
+}
+
+#mosques .mosque-content h2 em {
+  color: #588479;
+}
+
+#mosques .mosque-description {
+  margin: 0;
+  max-width: 460px;
+  font: 400 15px/1.8 "Inter", sans-serif;
+  color: #536b60;
+}
+
+/* TOMBOL */
+
+#mosques .mosque-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 25px;
+  margin-top: 7px;
+  border: 1px solid #c5d9cb;
+  border-radius: 999px;
+  background: #203a38;
+  color: #fff;
+  font: 600 14px "Inter", sans-serif;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+
+#mosques .mosque-search-btn:hover {
+  background: #386858;
+  transform: translateY(-2px);
+}
+
+#mosques .mosque-status {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #6a8073;
+}
+
+#mosques .mosque-results[hidden] {
+  display: none;
+}
+
+#mosques .mosque-results {
+  color: #28594a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  #mosques .mosque-redesign {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #mosques .mosque-photo {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  #mosques.mosque-section {
+    padding: 65px 0;
+  }
+
+  #mosques .mosque-photo {
+    height: 250px;
+    border-radius: 17px;
+  }
+
+  #mosques .mosque-content h2 {
+    font-size: clamp(40px, 9vw, 55px);
+  }
+
+  #mosques .mosque-description {
+    font-size: 14px;
+  }
+}
+
+ 
 </style><style>
 /* V3: Artikel Ramadan carousel — original palette preserved */
 #articles .article-carousel-track{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:8px 2px 18px;margin:-8px -2px 0;}
@@ -1142,12 +1295,70 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
     <div class="section-bottom-cta"><a href="https://enamplus.liputan6.com/index.php/tag/ramadan-2026" target="_blank" rel="noopener noreferrer">Lihat Selengkapnya</a></div>
   </div>
 </section>
-<section class="mosque-section new-section" id="mosques" aria-labelledby="mosquesTitle">
-  <div class="inner mosque-inner">
-  <div class="mosque-map" aria-hidden="true"><div class="map-streets"></div><div class="map-ring map-ring-1"></div><div class="map-ring map-ring-2"></div><div class="map-ring map-ring-3"></div><div class="map-center"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-map-pin" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></div><div class="map-coordinate"></div></div>
-  <div class="mosque-content"><div class="mosque-copy"><span class="section-kicker">PENCARIAN LOKASI</span><h2 id="mosquesTitle">Masjid <em>Terdekat</em></h2><p>Temukan masjid di sekitar Anda dengan mudah.</p><div id="mosqueStatus" class="mosque-status" role="status">Lokasi hanya diakses setelah Anda menekan tombol pencarian.</div><button type="button" id="findMosque" class="map-button"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-map-pin" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Cari Masjid Terdekat <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button><a id="mosqueResultsLink" class="mosque-results" target="_blank" rel="noopener noreferrer" hidden="">Buka hasil pencarian masjid <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a><a class="mosque-alt" href="https://www.google.com/maps/search/?api=1&amp;query=masjid" target="_blank" rel="noopener noreferrer">Cari Manual di Google Maps <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div>
+
+<section class="mosque-section new-section"
+  id="mosques" aria-labelledby="mosquesTitle">
+
+  <div class="inner mosque-redesign">
+
+    <div class="mosque-photo">
+      <img
+        src="assets/masjid-blitar.jpg"
+        alt="Masjid Agung Kota Blitar"
+        loading="lazy"
+      />
+      <span class="mosque-photo-label">
+        Masjid Agung Kota Blitar
+      </span>
+    </div>
+
+    <div class="mosque-content">
+      <span class="section-kicker">
+        PENCARIAN LOKASI
+      </span>
+
+      <h2 id="mosquesTitle">
+        Masjid <em>Terdekat</em>
+      </h2>
+
+      <p class="mosque-description">
+        Temukan masjid di sekitar Anda
+        dengan mudah untuk beribadah
+        dan menikmati kebersamaan Ramadan.
+      </p>
+
+      <button
+        type="button"
+        id="findMosque"
+        class="mosque-search-btn"
+      >
+        Cari Masjid Terdekat
+      </button>
+
+      <div
+        id="mosqueStatus"
+        class="mosque-status"
+        role="status"
+        aria-live="polite"
+      >
+        Izinkan akses lokasi untuk menemukan
+        masjid di sekitar Anda.
+      </div>
+
+      <a
+        id="mosqueResultsLink"
+        class="mosque-results"
+        target="_blank"
+        rel="noopener noreferrer"
+        hidden
+      >
+        Buka hasil pencarian masjid
+      </a>
+
+    </div>
   </div>
 </section>
+
 <section class="live-section new-section" id="livestream" aria-labelledby="liveTitle">
   <div class="inner">
     
