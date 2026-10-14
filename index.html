@@ -1529,6 +1529,16 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
  #smart .prayer-panel.glass-widget,#smart .quran-panel.glass-widget{padding:16px!important;gap:9px!important}
  #smart .quran-panel .verse-arabic{font-size:clamp(29px,7.5vw,36px)!important;line-height:1.7!important}
 }
+
+/* V42: align prayer CTA baseline to Ayat & Hikmah CTA */
+@media(min-width:901px){
+ #smart .prayer-panel .prayer-widget-footer{margin-top:auto!important;padding-top:8px!important}
+ #smart .prayer-panel,#smart .quran-panel{align-self:stretch!important}
+}
+/* Remove decorative rule in Live Streaming and its bottom CTA spacing */
+#livestream.live-section::before,#livestream.live-section::after,
+#livestream .inner::before,#livestream .inner::after{border:0!important;background-image:none!important}
+#livestream .section-bottom-cta{display:none!important}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -1607,7 +1617,6 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   <div class="inner">
     
     <div class="live-layout"><div class="live-heading"><span class="section-kicker">TAYANGAN PILIHAN</span><h2 id="liveTitle">Live <em>Streaming</em></h2><p>Ikuti tayangan pilihan Liputan6. Siaran langsung hadir sesuai jadwal.</p></div><div class="live-stage" id="liveStage"><div class="live-poster" id="livePoster"><span class="broadcast-label">LIPUTAN6</span><button type="button" id="loadStream" class="broadcast-play" aria-label="Putar siaran Liputan6"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-play" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 14 9-14 9z"></path></svg></button><div class="live-stage-bottom"><strong>Video Liputan6</strong><span>PUTAR VIDEO</span></div></div></div></div>
-    <div class="section-bottom-cta"><a href="https://www.youtube.com/watch?v=PvaMJFybKSE" target="_blank" rel="noopener noreferrer">Lihat di YouTube <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div>
   </div>
 </section>
 
