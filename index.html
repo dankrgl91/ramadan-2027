@@ -985,6 +985,18 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 @media(min-width:651px) and (max-width:900px){
  #smart .menu-panel .menu-feature img{height:clamp(220px,29vw,285px)}
 }
+
+/* V17: Menu Hari Ini returns to compact two-column recipe layout */
+@media(min-width:651px){
+ #smart .menu-panel .menu-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(15px,1.8vw,23px);padding:4px 0}
+ #smart .menu-panel .menu-feature img{width:100%;height:clamp(185px,19vw,245px);object-fit:cover;object-position:center;border-radius:15px}
+ #smart .menu-panel .menu-feature>div{width:100%;min-width:0;align-items:flex-start;justify-content:center;gap:9px}
+ #smart .menu-panel .menu-feature h4{font-size:clamp(24px,2vw,31px)}
+ #smart .menu-panel .smart-bottom{margin-top:12px}
+}
+@media(max-width:650px){
+ #smart .menu-panel .menu-feature{display:grid;grid-template-columns:1fr;gap:14px}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#livestream">Live Streaming</a><a href="#greetings">Kartu Ucapan</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
