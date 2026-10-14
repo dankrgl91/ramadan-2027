@@ -1476,6 +1476,27 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 /* V39: final Masjid hero is the visual closing section before Footer */
 #livestream.live-section{padding-bottom:clamp(48px,5vw,72px)!important}
 #mosques.mosque-section{padding-top:clamp(48px,5vw,72px)!important;padding-bottom:clamp(42px,4vw,55px)!important}
+
+/* V40: compact and balanced top Ramadan Smart cards */
+@media(min-width:901px){
+ #smart .smart-grid{align-items:start}
+ #smart .smart-grid>.prayer-panel,#smart .smart-grid>.quran-panel{
+  height:auto!important;min-height:0!important;align-self:stretch;
+ }
+ #smart .prayer-panel{justify-content:flex-start!important}
+ #smart .prayer-panel .prayer-widget-footer{margin-top:4px!important;padding-top:5px!important}
+}
+#smart .prayer-panel.glass-widget,#smart .quran-panel.glass-widget{padding:clamp(16px,1.6vw,22px)!important;gap:10px!important}
+#smart .prayer-panel .prayer-countdown{min-height:0!important;padding:9px 12px!important}
+#smart .prayer-panel .prayer-week{padding-top:6px!important}
+#smart .prayer-panel .prayer-day{min-height:39px!important}
+#smart .prayer-panel .prayer-time-item{padding:9px 10px!important}
+#smart .prayer-panel .prayer-extra>div{padding:8px 10px!important}
+#smart .quran-panel .verse-content{padding:clamp(15px,1.5vw,21px)!important;gap:12px!important}
+#smart .quran-panel .verse-arabic{line-height:1.65!important;padding:0!important}
+#smart .quran-panel .verse-reflection{padding:12px 15px!important}
+#smart .quran-panel .smart-bottom{margin-top:8px!important}
+@media(max-width:650px){#smart .quran-panel .verse-content{padding:16px!important}}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
