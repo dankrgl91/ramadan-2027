@@ -2206,11 +2206,13 @@ function render(){frameScheduled=false;
 }
 function schedule(){if(!frameScheduled){frameScheduled=true;requestAnimationFrame(render)}}
 async function prime(){if(priming||primed||!metadataReady||document.hidden)return;priming=true;
- try{await video.play();primed=true;video.pause();seek();markReady()}catch(e){console.info('Video waits for browser interaction',e?.name||e)}finally{priming=false}}
+ try{await video.play();primed=true;await new Promise(resolve=>requestAnimationFrame(resolve));video.pause();seek();markReady()}catch(e){console.info('Video waits for browser interaction',e?.name||e);seek()}finally{priming=false}}
 video.addEventListener('loadedmetadata',()=>{duration=Number.isFinite(video.duration)&&video.duration>0?video.duration:10;metadataReady=true;video.pause();schedule();prime()});
-video.addEventListener('loadeddata',()=>{video.pause();markReady();schedule()});
+video.addEventListener('loadeddata',()=>{markReady();schedule()});
 video.addEventListener('seeked',()=>{markReady();seek()});
-video.addEventListener('canplay',()=>{markReady();schedule()});
+video.addEventListener('canplay',()=>{markReady();schedule();seek()});
+video.addEventListener('canplaythrough',()=>{schedule();seek()});
+video.addEventListener('progress',()=>{if(metadataReady)schedule()});
 video.addEventListener('error',()=>{if(!fallbackAttempted){fallbackAttempted=true;metadataReady=false;primed=false;video.classList.remove('is-ready');video.src='ramadan-hero.mp4';video.load()}else{console.error('Hero MP4 unavailable',video.error)}});
 addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});addEventListener('pageshow',schedule);addEventListener('pointerdown',prime,{passive:true});addEventListener('touchstart',prime,{passive:true});document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();else{schedule();prime()}});video.load();schedule();
 // Prayer times: date-aware; avoids showing expired Ramadan timetables as current.
