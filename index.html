@@ -1814,6 +1814,58 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #videos .video-heading-cta{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;white-space:nowrap;text-decoration:none;border:1px solid rgba(246,240,230,.75);border-radius:100px;color:#f6f0e6;padding:12px 22px;font:600 13px/1.4 "Inter",Arial,sans-serif;transition:background .2s,color .2s}
 #videos .video-heading-cta:hover{background:#f6f0e6;color:#17362f}
 @media(max-width:650px){#videos .section-head{align-items:flex-start!important;flex-wrap:wrap!important;gap:14px!important}#videos .video-heading-cta{margin-left:auto!important;padding:10px 16px;font-size:12px}}
+
+/* V52 — Google Maps preview + reference-inspired location information */
+#mosques.mosque-section{background:#dce8df!important;padding:clamp(65px,7vw,105px) 0!important}
+#mosques.mosque-section>.inner.mosque-redesign.mosque-map-layout{
+ box-sizing:border-box!important;width:min(90%,1200px)!important;max-width:1200px!important;
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ align-items:center!important;gap:clamp(32px,4.5vw,72px)!important;
+ margin:auto!important;padding:0!important;min-height:0!important;
+ border:0!important;border-radius:0!important;background:transparent!important;
+ box-shadow:none!important;overflow:visible!important;
+}
+#mosques .mosque-map-preview{width:100%;height:clamp(385px,39vw,530px);border-radius:22px;overflow:hidden;background:#c5d4cb;box-shadow:0 18px 35px #19382a1a}
+#mosques .mosque-map-preview iframe{display:block;width:100%;height:100%;border:0}
+#mosques .mosque-map-layout .mosque-content{
+ box-sizing:border-box!important;display:flex!important;flex-direction:column!important;
+ align-items:flex-start!important;justify-content:center!important;gap:0!important;
+ width:100%!important;max-width:none!important;padding:0!important;
+ text-align:left!important;background:transparent!important;
+}
+#mosques .mosque-map-layout .section-kicker{color:#477e73!important;font-size:12px!important;letter-spacing:.16em!important;margin:0 0 22px!important}
+#mosques .mosque-map-layout #mosquesTitle{color:#203a38!important;text-align:left!important;font-size:clamp(36px,4.4vw,65px)!important;line-height:1.14!important;letter-spacing:-.045em!important;margin:0 0 25px!important}
+#mosques .mosque-map-layout #mosquesTitle em{color:#477e73!important}
+#mosques .mosque-map-layout .mosque-description,
+#mosques .mosque-map-layout .mosque-privacy{
+ display:block!important;text-align:left!important;color:#546e63!important;
+ max-width:510px!important;font:400 clamp(15px,1.3vw,18px)/1.7 "Inter",Arial,sans-serif!important;
+ margin:0 0 22px!important;opacity:1!important;
+}
+#mosques .mosque-map-layout .mosque-privacy{margin-bottom:27px!important}
+#mosques .mosque-map-layout .mosque-search-btn{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:16px!important;
+ min-height:54px!important;max-width:100%;padding:13px 22px!important;
+ background:#203a38!important;border:1px solid #203a38!important;color:#fff!important;
+ border-radius:999px!important;font-size:14px!important;margin:0 0 21px!important;box-shadow:none!important;
+}
+#mosques .mosque-map-layout .mosque-search-btn span:last-child{margin-left:7px;font-size:18px}
+#mosques .mosque-map-layout .mosque-manual-link{display:inline-flex;align-items:center;gap:15px;font:600 14px/1.5 "Inter",Arial,sans-serif;color:#203a38;text-decoration:none}
+#mosques .mosque-map-layout .mosque-manual-link:hover{text-decoration:underline}
+#mosques .mosque-map-layout .mosque-status{margin:17px 0 0!important;text-align:left!important;color:#60776c!important;opacity:1!important;font-size:11px!important;max-width:470px!important}
+#mosques .mosque-map-layout .mosque-results{margin:10px 0 0!important;color:#203a38!important;text-align:left!important}
+@media(max-width:900px){
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-map-layout{grid-template-columns:minmax(0,1fr)!important;gap:30px!important}
+ #mosques .mosque-map-preview{height:auto;aspect-ratio:16/10}
+}
+@media(max-width:650px){
+ #mosques.mosque-section{padding:55px 0!important}
+ #mosques.mosque-section>.inner.mosque-redesign.mosque-map-layout{width:90%!important;gap:26px!important}
+ #mosques .mosque-map-preview{aspect-ratio:4/3;border-radius:17px}
+ #mosques .mosque-map-layout #mosquesTitle{font-size:clamp(36px,8.5vw,48px)!important;margin-bottom:20px!important}
+ #mosques .mosque-map-layout .mosque-description,#mosques .mosque-map-layout .mosque-privacy{font-size:15px!important;margin-bottom:16px!important}
+ #mosques .mosque-map-layout .mosque-privacy{margin-bottom:23px!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -1896,17 +1948,21 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 </section>
 
 <section class="mosque-section new-section" id="mosques" aria-labelledby="mosquesTitle">
-  <div class="inner mosque-redesign mosque-hero">
-    <div class="mosque-content">
-      <span class="section-kicker">PENCARIAN LOKASI</span>
-      <h2 id="mosquesTitle">Masjid <em>Terdekat</em></h2>
-      <p class="mosque-description">Temukan masjid di sekitar Anda dengan mudah untuk beribadah dan menikmati kebersamaan Ramadan.</p>
-      <button type="button" id="findMosque" class="mosque-search-btn">Cari Masjid Terdekat</button>
-      <div id="mosqueStatus" class="mosque-status" role="status" aria-live="polite">Izinkan akses lokasi untuk menemukan masjid di sekitar Anda.</div>
-      <a id="mosqueResultsLink" class="mosque-results" target="_blank" rel="noopener noreferrer" hidden>Buka hasil pencarian masjid</a>
-    </div>
-    <span class="mosque-hero-credit">Masjid Agung Kota Blitar</span>
+ <div class="inner mosque-redesign mosque-map-layout">
+  <div class="mosque-map-preview">
+   <iframe id="mosqueMapFrame" title="Preview Google Maps — masjid di Jakarta" src="https://www.google.com/maps?q=masjid%20Jakarta&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
   </div>
+  <div class="mosque-content">
+   <span class="section-kicker">PENCARIAN LOKASI</span>
+   <h2 id="mosquesTitle">Masjid <em>Terdekat</em></h2>
+   <p class="mosque-description">Temukan masjid di sekitar Anda dengan mudah.</p>
+   <p class="mosque-privacy">Lokasi hanya diakses setelah Anda menekan tombol pencarian.</p>
+   <button type="button" id="findMosque" class="mosque-search-btn"><span aria-hidden="true">⌖</span> Cari Masjid Terdekat <span aria-hidden="true">↗</span></button>
+   <a class="mosque-manual-link" href="https://www.google.com/maps/search/masjid/" target="_blank" rel="noopener noreferrer">Cari Manual di Google Maps <span aria-hidden="true">→</span></a>
+   <div id="mosqueStatus" class="mosque-status" role="status" aria-live="polite">Peta menampilkan area contoh hingga Anda memilih pencarian lokasi.</div>
+   <a id="mosqueResultsLink" class="mosque-results" target="_blank" rel="noopener noreferrer" hidden>Buka hasil pencarian masjid</a>
+  </div>
+ </div>
 </section>
 
 </main><footer class="new-footer"><div class="inner footer-inner"><div><strong>Festival <em>Ramadan.</em></strong><p>© 2027</p></div><a href="#journey">KE ATAS <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg></a></div></footer>
@@ -2210,6 +2266,8 @@ $('findMosque').addEventListener('click',()=>{
    ({coords})=>{
      btn.disabled=false;status.textContent='Lokasi ditemukan. Membuka hasil pencarian masjid di Google Maps.';
      const lat=coords.latitude.toFixed(5),lng=coords.longitude.toFixed(5);
+     const mapFrame=$('mosqueMapFrame');
+     if(mapFrame){mapFrame.src='https://www.google.com/maps?q='+encodeURIComponent('masjid near '+lat+','+lng)+'&output=embed';mapFrame.title='Peta pencarian masjid di sekitar lokasi Anda';}
      const url='https://www.google.com/maps/search/masjid/@'+lat+','+lng+',14z';
      const resultLink=$('mosqueResultsLink');
      resultLink.href=url;
