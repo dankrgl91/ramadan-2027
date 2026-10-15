@@ -1994,6 +1994,36 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #ramadan-activities .gateway-game .gateway-visual{background-image:url("assets/pasar-ramadan-thumbnail.png")!important}
 #ramadan-activities .gateway-klbb .gateway-visual{background-image:url("assets/klbb-thumbnail.png")!important}
 @media(max-width:1000px){#ramadan-activities .gateway-visual{min-height:190px}}
+
+/* V61: isolate each gateway thumbnail from copy and prevent overlap */
+#ramadan-activities .gateway-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#ramadan-activities .gateway-card{
+ display:grid!important;grid-template-columns:minmax(0,46%) minmax(0,54%)!important;
+ align-items:stretch!important;min-width:0!important;overflow:hidden!important;
+ min-height:340px!important;border-radius:22px!important;
+}
+#ramadan-activities .gateway-card>.gateway-visual{
+ box-sizing:border-box!important;position:relative!important;
+ display:block!important;min-width:0!important;width:100%!important;
+ height:100%!important;min-height:340px!important;aspect-ratio:auto!important;
+ background-size:cover!important;background-position:center!important;
+ background-repeat:no-repeat!important;border-radius:0!important;
+}
+#ramadan-activities .gateway-card>.gateway-copy{
+ box-sizing:border-box!important;position:relative!important;z-index:1;
+ min-width:0!important;width:100%!important;padding:clamp(20px,2.2vw,30px)!important;
+ background:#f5f5ee!important;overflow-wrap:break-word;
+}
+#ramadan-activities .gateway-copy h3{font-size:clamp(24px,2.2vw,34px)!important;line-height:1.18!important;overflow-wrap:break-word}
+#ramadan-activities .gateway-copy p{font-size:13px!important;line-height:1.7!important}
+@media(max-width:1100px){
+ #ramadan-activities .gateway-grid{grid-template-columns:1fr!important}
+ #ramadan-activities .gateway-card{grid-template-columns:minmax(0,1fr)!important;min-height:0!important}
+ #ramadan-activities .gateway-card>.gateway-visual{
+  height:auto!important;min-height:0!important;aspect-ratio:16/9!important;
+ }
+ #ramadan-activities .gateway-card>.gateway-copy{padding:24px!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
