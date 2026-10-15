@@ -1776,6 +1776,37 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   font-size:clamp(36px,8.5vw,48px)!important;
  }
 }
+
+/* V50: unified symmetrical padding for Ramadan Smart cards */
+#smart.smart-section>.inner{box-sizing:border-box;width:min(90%,1200px)!important;max-width:1200px!important;margin-inline:auto!important}
+#smart .smart-grid{gap:18px!important}
+#smart .smart-grid>.prayer-panel.glass-widget,
+#smart .smart-grid>.quran-panel.glass-widget{
+ box-sizing:border-box!important;
+ padding:24px!important;
+ gap:12px!important;
+}
+#smart .quran-panel .verse-content{
+ box-sizing:border-box!important;
+ padding:20px!important;
+}
+@media(min-width:901px){
+ /* Restore equal bottom spacing while keeping both CTAs at matching baseline */
+ #smart .smart-grid>.prayer-panel.glass-widget{padding-bottom:80px!important}
+ #smart .prayer-panel .prayer-widget-footer{left:24px!important;right:24px!important;bottom:24px!important}
+ #smart .quran-panel .smart-bottom{margin-top:auto!important}
+}
+@media(max-width:900px){
+ #smart .smart-grid{gap:16px!important}
+ #smart .smart-grid>.prayer-panel.glass-widget,
+ #smart .smart-grid>.quran-panel.glass-widget{padding:20px!important}
+ #smart .quran-panel .verse-content{padding:18px!important}
+}
+@media(max-width:380px){
+ #smart .smart-grid>.prayer-panel.glass-widget,
+ #smart .smart-grid>.quran-panel.glass-widget{padding:18px!important}
+ #smart .quran-panel .verse-content{padding:16px!important}
+}
 </style></head><body>
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Ramadan Smart</a><a href="#articles">Artikel</a><a href="#videos">Video</a><a href="#livestream">Live Streaming</a><a href="#mosques">Masjid</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
