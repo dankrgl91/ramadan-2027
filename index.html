@@ -2294,6 +2294,15 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #smart .countdown-units{display:flex!important;align-self:flex-end!important;justify-content:space-between!important;gap:6px!important;width:55%!important;max-width:55%!important;color:#f7f9f7!important;font-family:"Inter",sans-serif!important;font-size:10px!important;font-weight:400!important;line-height:1.2!important;position:relative!important;z-index:1!important;text-align:center!important}
 #smart .countdown-units span{flex:1 1 0!important;min-width:0!important}
 @media(max-width:580px){#smart .prayer-countdown{min-height:190px!important;padding:14px 12px!important}#smart .prayer-countdown-copy,#smart .prayer-countdown #countdownTime,#smart .countdown-units{width:56%!important;max-width:56%!important}#smart .prayer-countdown .prayer-eyebrow{font-size:17px!important}#smart .prayer-countdown #countdownTime{font-size:clamp(22px,6vw,32px)!important}.countdown-units{font-size:9px!important}}
+
+/* V10 — Countdown label on one line, centered in right-hand overlay */
+#smart .prayer-countdown{align-items:stretch!important;justify-content:center!important;padding:18px 16px!important}
+#smart .prayer-countdown-copy,#smart .prayer-countdown #countdownTime,#smart .prayer-countdown .countdown-units{box-sizing:border-box!important;width:62%!important;max-width:none!important;margin-left:auto!important;margin-right:0!important;align-self:auto!important;transform:translateX(-5%)!important;text-align:center!important}
+#smart .prayer-countdown .prayer-eyebrow{font-family:"Lora",Georgia,serif!important;display:block!important;white-space:nowrap!important;max-width:none!important;font-size:clamp(15px,1.48vw,24px)!important;line-height:1.25!important;text-align:center!important}
+#smart .prayer-countdown #countdownTime{font-size:clamp(26px,2.35vw,43px)!important;letter-spacing:0!important;line-height:1.12!important;margin-top:16px!important;margin-bottom:7px!important;white-space:nowrap!important;text-align:center!important}
+#smart .prayer-countdown .countdown-units{display:flex!important;justify-content:space-around!important;gap:4px!important;font-size:11px!important}
+#smart .prayer-countdown .countdown-units span{flex:1!important;text-align:center!important}
+@media(max-width:580px){#smart .prayer-countdown-copy,#smart .prayer-countdown #countdownTime,#smart .prayer-countdown .countdown-units{width:65%!important;transform:none!important}#smart .prayer-countdown .prayer-eyebrow{font-size:clamp(13px,3.6vw,18px)!important}#smart .prayer-countdown #countdownTime{font-size:clamp(23px,6vw,34px)!important}}
 </style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -2315,7 +2324,7 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 <button aria-label="Kembali ke jadwal hari ini" aria-pressed="true" class="prayer-today is-active" id="prayerToday" type="button">Hari Ini</button>
 </div>
 <div aria-live="off" class="prayer-countdown">
-<div class="prayer-countdown-copy"><span class="prayer-eyebrow" id="countdownLabel">Menuju Subuh</span><p id="countdownDetail">Subuh pukul 04:14</p></div>
+<div class="prayer-countdown-copy"><span class="prayer-eyebrow" id="countdownLabel">Menuju Maghrib</span><p id="countdownDetail">Subuh pukul 04:14</p></div>
 <strong aria-label="Waktu hitung mundur" id="countdownTime">02:29:53</strong>
 <div class="countdown-units" aria-hidden="true"><span>Jam</span><span>Menit</span><span>Detik</span></div>
 </div>
