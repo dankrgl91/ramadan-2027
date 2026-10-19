@@ -2250,6 +2250,25 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #smart .prayer-month{grid-column:1/-1!important}
 @media(max-width:1050px){#smart .prayer-panel{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto auto auto auto!important}#smart .prayer-countdown{grid-column:1!important;grid-row:3!important;min-height:160px!important}#smart .prayer-times{grid-column:1!important;grid-row:4!important;min-height:125px!important}#smart .prayer-widget-footer{grid-column:1!important;grid-row:5!important}}
 @media(max-width:580px){#smart .prayer-times{grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(75px,1fr))!important}#smart .prayer-time-item strong{font-size:13px!important}}
+
+/* V7: uploaded mosque background and spacious 3x2 prayer timetable */
+#smart .prayer-countdown{
+ background-image:linear-gradient(90deg,rgba(5,34,29,.04) 0%,rgba(5,34,29,.08) 36%,rgba(5,34,29,.46) 78%,rgba(5,34,29,.55) 100%),url("assets/mosque-maghrib-bg.png")!important;
+ background-position:left center!important;background-size:cover!important;background-repeat:no-repeat!important;
+ min-height:210px!important;padding:20px 14px!important;align-items:flex-end!important;justify-content:center!important;
+}
+#smart .prayer-countdown:after{display:none!important}
+#smart .prayer-countdown-copy{width:53%!important;margin:0!important;text-align:left!important;align-self:flex-end!important}
+#smart .prayer-countdown #countdownTime{width:53%!important;margin:14px 0 0!important;font-size:clamp(22px,2.1vw,34px)!important;align-self:flex-end!important;text-align:left!important}
+#smart .prayer-times{grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;min-height:210px!important;gap:6px!important;padding:8px!important}
+#smart .prayer-time-item{border:1px solid #dfe8de!important;border-radius:10px!important;background:#fff!important;padding:9px 3px!important;gap:5px!important}
+#smart .prayer-time-item:not(.highlight){border-right:1px solid #dfe8de!important}
+#smart .prayer-time-item.highlight{background:#fbedd5!important;border-color:#e5d4b5!important}
+#smart .prayer-time-item .prayer-icon{font-size:20px!important}
+#smart .prayer-time-item .prayer-time-name{font-size:11px!important}
+#smart .prayer-time-item strong{font-size:14px!important}
+@media(max-width:1050px){#smart .prayer-countdown{min-height:190px!important}#smart .prayer-times{min-height:180px!important}}
+@media(max-width:580px){#smart .prayer-countdown-copy,#smart .prayer-countdown #countdownTime{width:56%!important}#smart .prayer-times{min-height:185px!important}}
 </style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -2270,7 +2289,7 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 </div></div>
 <button aria-label="Kembali ke jadwal hari ini" aria-pressed="true" class="prayer-today is-active" id="prayerToday" type="button">Hari Ini</button>
 </div>
-<div aria-live="off" class="prayer-countdown"><svg class="countdown-mosque-art" viewBox="0 0 460 240" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="mosqueG" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cbad66"/><stop offset="1" stop-color="#648a75"/></linearGradient></defs><circle cx="365" cy="35" r="20" fill="#f9e5b4" opacity=".92"/><circle cx="374" cy="27" r="20" fill="#133a32"/><g fill="url(#mosqueG)" opacity=".94"><path d="M30 226V110h17v116zm-5-116h27l-14-26zm6-34h14l-7-24zm-2 150V139h18v87zM340 226V103h20v123zm-5-123h30l-15-29zm8-36h14l-7-25zm-8 159v-86h30v86z"/><path d="M85 226v-68h260v68zm16-67c3-50 43-87 109-101 65 14 104 52 109 101zm104-109V33h10v17zm4-18-6-10h13z"/><path d="M120 226v-42q20-32 40 0v42zm132 0v-42q20-32 40 0v42z"/></g><g fill="#173d34"><path d="M180 226v-45q30-43 60 0v45z"/><path d="M52 226v-62l20-16 20 16v62zM306 226v-62l20-16 20 16v62z"/></g><g fill="#f2cf81" opacity=".85"><rect x="36" y="152" width="6" height="22" rx="3"/><rect x="346" y="152" width="6" height="22" rx="3"/><rect x="140" y="188" width="7" height="17" rx="3"/><rect x="273" y="188" width="7" height="17" rx="3"/></g></svg>
+<div aria-live="off" class="prayer-countdown">
 <div class="prayer-countdown-copy"><span class="prayer-eyebrow" id="countdownLabel">Menuju Subuh</span><p id="countdownDetail">Subuh pukul 04:14</p></div>
 <strong aria-label="Waktu hitung mundur" id="countdownTime">02:29:53</strong>
 </div>
