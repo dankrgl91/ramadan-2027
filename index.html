@@ -2147,6 +2147,24 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #gatewayTitle em{font-family:"Instrument Serif",Georgia,serif!important;font-style:italic!important;font-weight:400!important;font-size:1em!important;line-height:inherit!important;color:#4b8477!important}
 @media(max-width:900px){#smartTitle,#articlesTitle,#toolsTitle,#liveTitle,#videosTitle,#mosquesTitle,#gatewayTitle{font-size:clamp(40px,6vw,58px)!important}}
 @media(max-width:600px){#smartTitle,#articlesTitle,#toolsTitle,#liveTitle,#videosTitle,#mosquesTitle,#gatewayTitle{font-size:clamp(34px,9vw,46px)!important}}
+
+/* FINAL TYPOGRAPHY OVERRIDE V2 — correct specificity */
+#smart .smart-intro #smartTitle,
+#articles .section-head #articlesTitle,
+#ramadan-tools .smart-intro #toolsTitle,
+#livestream .live-heading #liveTitle,
+#videos .section-head #videosTitle,
+#mosques .mosque-content #mosquesTitle,
+#ramadan-activities .gateway-heading #gatewayTitle{font-family:"Lora",Georgia,serif!important;font-weight:400!important;font-style:normal!important;font-size:63px!important;line-height:1.12!important;letter-spacing:-.045em!important}
+#smart .smart-intro #smartTitle em,
+#articles .section-head #articlesTitle em,
+#ramadan-tools .smart-intro #toolsTitle em,
+#livestream .live-heading #liveTitle em,
+#videos .section-head #videosTitle em,
+#mosques .mosque-content #mosquesTitle em,
+#ramadan-activities .gateway-heading #gatewayTitle em{font-family:"Instrument Serif",Georgia,serif!important;font-style:italic!important;font-weight:400!important;font-size:1em!important;color:#4b8477!important}
+@media(max-width:900px){#smart .smart-intro #smartTitle,#articles .section-head #articlesTitle,#ramadan-tools .smart-intro #toolsTitle,#livestream .live-heading #liveTitle,#videos .section-head #videosTitle,#mosques .mosque-content #mosquesTitle,#ramadan-activities .gateway-heading #gatewayTitle{font-size:clamp(40px,6vw,58px)!important}}
+@media(max-width:600px){#smart .smart-intro #smartTitle,#articles .section-head #articlesTitle,#ramadan-tools .smart-intro #toolsTitle,#livestream .live-heading #liveTitle,#videos .section-head #videosTitle,#mosques .mosque-content #mosquesTitle,#ramadan-activities .gateway-heading #gatewayTitle{font-size:clamp(34px,9vw,46px)!important}}
 </style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
