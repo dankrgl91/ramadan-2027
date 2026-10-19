@@ -2229,6 +2229,27 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #smart .quran-panel .verse-reflection{padding:10px 12px!important}
 #smart .quran-panel .verse-reflection p{font-size:11px!important;line-height:1.45!important}
 @media(max-width:580px){#smart.smart-section{padding:34px 0!important}#smart .prayer-panel{grid-template-rows:auto auto auto auto auto!important}#smart .prayer-countdown{min-height:150px!important}#smart .prayer-times{min-height:120px!important}#smart .quran-panel .verse-content .verse-arabic{font-size:20px!important}}
+
+/* IMSAKIYAH V6 — six aligned icon times and CTA below left */
+#smart .prayer-panel{display:grid!important;grid-template-columns:minmax(0,46fr) minmax(0,54fr)!important;grid-template-rows:auto auto minmax(190px,auto) auto!important;gap:10px 12px!important;align-items:stretch!important}
+#smart .prayer-panel>.smart-head,#smart .prayer-panel>.prayer-controls{grid-column:1/-1!important}
+#smart .prayer-countdown{grid-column:1!important;grid-row:3!important;min-height:190px!important;justify-content:center!important;padding:14px!important}
+#smart .countdown-mosque-art{height:86%!important;opacity:.93!important}
+#smart .prayer-countdown-copy{margin-left:36%!important}
+#smart .prayer-countdown #countdownTime{font-size:clamp(22px,2.3vw,34px)!important;margin-left:36%!important;white-space:nowrap!important}
+#smart .prayer-times{grid-column:2!important;grid-row:3!important;display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;grid-template-rows:minmax(0,1fr)!important;grid-auto-rows:auto!important;gap:0!important;min-height:190px!important;padding:12px 5px!important;background:#f8f9f5!important;border:1px solid #dfe6dd!important;border-radius:14px!important}
+#smart .prayer-time-item{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:8px!important;min-width:0!important;padding:8px 1px!important;text-align:center!important;background:transparent!important;border:0!important;border-radius:8px!important}
+#smart .prayer-time-item:not(.highlight){border-right:1px solid #e3e7df!important}
+#smart .prayer-time-item.highlight{background:#fbedd5!important;border-radius:10px!important}
+#smart .prayer-time-item .prayer-icon{display:block!important;font-family:Arial,sans-serif!important;font-size:24px!important;line-height:1!important;color:#24594e!important}
+#smart .prayer-time-item .prayer-time-name{font-size:10px!important;line-height:1.2!important;color:#284d42!important}
+#smart .prayer-time-item strong{font-size:clamp(11px,1vw,14px)!important;line-height:1.2!important;color:#14392f!important}
+#smart .prayer-details-toggle,#smart .prayer-extra,#smart .prayer-week{display:none!important}
+#smart .prayer-widget-footer{grid-column:2!important;grid-row:4!important;position:static!important;display:flex!important;justify-content:flex-start!important;align-items:center!important;padding:0!important;margin:0!important;border:0!important;min-height:30px!important}
+#smart .prayer-month-trigger{background:transparent!important;color:#24594e!important;border:0!important;border-radius:0!important;text-decoration:underline!important;padding:5px 0!important;font-size:12px!important;font-weight:600!important}
+#smart .prayer-month{grid-column:1/-1!important}
+@media(max-width:1050px){#smart .prayer-panel{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto auto auto auto!important}#smart .prayer-countdown{grid-column:1!important;grid-row:3!important;min-height:160px!important}#smart .prayer-times{grid-column:1!important;grid-row:4!important;min-height:125px!important}#smart .prayer-widget-footer{grid-column:1!important;grid-row:5!important}}
+@media(max-width:580px){#smart .prayer-times{grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(75px,1fr))!important}#smart .prayer-time-item strong{font-size:13px!important}}
 </style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
@@ -2254,16 +2275,15 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 <strong aria-label="Waktu hitung mundur" id="countdownTime">02:29:53</strong>
 </div>
 <div aria-label="Waktu ibadah" class="prayer-times">
-<div class="prayer-time-item"><span>Imsak</span><strong id="timeImsak">04:04</strong></div>
-<div class="prayer-time-item"><span>Subuh</span><strong id="timeSubuh">04:14</strong></div>
-<div class="prayer-time-item highlight"><span>Maghrib <small hidden="" id="prayerMaghribHint">(Berbuka)</small></span><strong id="timeMaghrib">17:46</strong></div>
-<div class="prayer-time-item"><span>Isya</span><strong id="timeIsya">18:56</strong></div>
+<div class="prayer-time-item"><span class="prayer-icon" aria-hidden="true">☼</span><span class="prayer-time-name">Imsak</span><strong id="timeImsak">04:04</strong></div>
+<div class="prayer-time-item"><span class="prayer-icon" aria-hidden="true">◉</span><span class="prayer-time-name">Subuh</span><strong id="timeSubuh">04:14</strong></div>
+<div class="prayer-time-item"><span class="prayer-icon" aria-hidden="true">☀</span><span class="prayer-time-name">Zuhur</span><strong id="timeDzuhur">11:39</strong></div>
+<div class="prayer-time-item"><span class="prayer-icon" aria-hidden="true">☁</span><span class="prayer-time-name">Asar</span><strong id="timeAshar">14:45</strong></div>
+<div class="prayer-time-item highlight"><span class="prayer-icon" aria-hidden="true">◒</span><span class="prayer-time-name">Maghrib <small hidden id="prayerMaghribHint">(Berbuka)</small></span><strong id="timeMaghrib">17:46</strong></div>
+<div class="prayer-time-item"><span class="prayer-icon" aria-hidden="true">☾</span><span class="prayer-time-name">Isya</span><strong id="timeIsya">18:56</strong></div>
 </div>
-<button aria-controls="prayerExtra" aria-expanded="true" class="prayer-details-toggle" id="prayerMoreToggle" type="button">Waktu lainnya</button>
-<div class="prayer-extra" id="prayerExtra">
-<div><span>Zuhur</span><strong id="timeDzuhur">11:39</strong></div>
-<div><span>Asar</span><strong id="timeAshar">14:45</strong></div>
-</div>
+<button aria-controls="prayerExtra" aria-expanded="false" class="prayer-details-toggle" id="prayerMoreToggle" type="button" hidden>Waktu lainnya</button>
+<div class="prayer-extra" id="prayerExtra" hidden></div>
 <div aria-label="Pilih jadwal tanggal lain" class="prayer-week" id="prayerWeek" role="group"><button aria-label="Minggu, 11 Oktober 2026" class="prayer-day" type="button"><span>Min</span><strong>11</strong></button><button aria-label="Senin, 12 Oktober 2026" class="prayer-day" type="button"><span>Sen</span><strong>12</strong></button><button aria-label="Selasa, 13 Oktober 2026" class="prayer-day" type="button"><span>Sel</span><strong>13</strong></button><button aria-current="date" aria-label="Rabu, 14 Oktober 2026" class="prayer-day is-selected is-today" type="button"><span>Rab</span><strong>14</strong></button><button aria-label="Kamis, 15 Oktober 2026" class="prayer-day" type="button"><span>Kam</span><strong>15</strong></button><button aria-label="Jumat, 16 Oktober 2026" class="prayer-day" type="button"><span>Jum</span><strong>16</strong></button><button aria-label="Sabtu, 17 Oktober 2026" class="prayer-day" type="button"><span>Sab</span><strong>17</strong></button></div>
 <div class="prayer-widget-footer">
 <button aria-controls="prayerMonth" aria-expanded="false" class="prayer-month-trigger" id="prayerMonthToggle" type="button">Jadwal Sebulan</button>
