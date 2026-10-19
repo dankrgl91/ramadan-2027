@@ -2269,6 +2269,21 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
 #smart .prayer-time-item strong{font-size:14px!important}
 @media(max-width:1050px){#smart .prayer-countdown{min-height:190px!important}#smart .prayer-times{min-height:180px!important}}
 @media(max-width:580px){#smart .prayer-countdown-copy,#smart .prayer-countdown #countdownTime{width:56%!important}#smart .prayer-times{min-height:185px!important}}
+
+/* V8: wider Imsakiyah panel; centered countdown over the mosque card */
+@media(min-width:1051px){
+ #smart .smart-grid{grid-template-columns:minmax(0,1.38fr) minmax(0,1fr)!important}
+ #smart .prayer-panel{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)!important}
+}
+#smart .prayer-countdown{min-height:230px!important;align-items:center!important;justify-content:center!important;padding:18px!important;background-position:35% center!important}
+#smart .prayer-countdown:before{content:"";position:absolute;inset:0;display:block!important;background:rgba(4,32,27,.19)!important;pointer-events:none}
+#smart .prayer-countdown-copy{width:100%!important;max-width:100%!important;margin:0!important;align-self:center!important;text-align:center!important;z-index:1!important}
+#smart .prayer-countdown .prayer-eyebrow{font-size:clamp(14px,1.4vw,19px)!important;line-height:1.3!important;text-shadow:0 2px 9px rgba(0,0,0,.65)!important}
+#smart .prayer-countdown #countdownDetail{font-size:10px!important;text-align:center!important;text-shadow:0 2px 6px #001b17!important}
+#smart .prayer-countdown #countdownTime{width:100%!important;max-width:100%!important;align-self:center!important;text-align:center!important;margin:10px 0 0!important;font-size:clamp(28px,2.8vw,47px)!important;letter-spacing:.015em!important;text-shadow:0 3px 12px rgba(0,0,0,.55)!important}
+#smart .prayer-times{min-height:230px!important}
+@media(max-width:1050px){#smart .prayer-countdown{min-height:210px!important}#smart .prayer-times{min-height:180px!important}}
+@media(max-width:580px){#smart .prayer-countdown{min-height:190px!important}#smart .prayer-countdown #countdownTime{font-size:clamp(28px,7vw,42px)!important}}
 </style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
