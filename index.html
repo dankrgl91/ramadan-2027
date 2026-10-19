@@ -2067,15 +2067,77 @@ section.new-section .mosque-inner { gap: clamp(26px,4vw,64px); }
   font-size:clamp(33px,7.8vw,44px)!important;
  }
 }
-</style></head><body>
+<style>\n/* Ramadan 2027 — compact 2-column Tools Ramadan rework. Existing data logic remains intact. */
+#smart.smart-section{padding:66px 0 78px!important;background:radial-gradient(ellipse at 85% 12%,#dcebe3 0%,transparent 42%),linear-gradient(135deg,#f7f8f5,#eaf0ea 65%,#f5f7f1)!important}
+#smart.smart-section:before{content:"";position:absolute;inset:0;width:auto;height:auto;z-index:-1;background:radial-gradient(circle at 3% 34%,#d5b87824 0%,transparent 32%),repeating-linear-gradient(45deg,transparent 0 54px,#31594a08 55px 56px);pointer-events:none}
+#smart>.inner{width:min(93%,1340px)!important;max-width:1340px!important}
+#smart .smart-intro{margin-bottom:23px!important;max-width:100%!important}
+#smart .smart-intro .section-kicker{font-size:11px!important;letter-spacing:.17em!important;color:#a38149!important}
+#smart .smart-intro #smartTitle{font:500 clamp(36px,4.1vw,58px)/1.13 "Lora",Georgia,serif!important;letter-spacing:-.05em!important;color:#153d34!important;margin:9px 0 7px!important}
+#smart .smart-intro #smartTitle em{color:#468273!important}
+#smart .smart-intro>p{color:#596e63!important;font-size:14px!important;margin:0!important}
+#smart .smart-grid{display:grid!important;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr)!important;grid-template-areas:"prayer quran"!important;gap:16px!important;align-items:stretch!important}
+#smart .smart-grid>.glass-widget{height:auto!important;min-height:0!important;align-self:stretch!important;border-radius:20px!important;padding:21px!important;background:#fffefa!important;border:1px solid #e3dcc9!important;box-shadow:0 16px 34px #264c3b13!important;gap:12px!important;color:#173d35!important;backdrop-filter:none!important}
+#smart .smart-head{display:flex!important;align-items:center!important;gap:10px!important;flex-wrap:nowrap!important;min-height:56px!important}
+#smart .smart-head>div:first-child{flex:1!important;min-width:0!important}
+#smart .smart-head h3{font:500 clamp(21px,2vw,29px)/1.17 "Lora",Georgia,serif!important;color:#173b34!important;letter-spacing:-.035em!important}
+#smart .smart-head p{font:400 12px/1.5 "Inter",sans-serif!important;color:#64766b!important;margin-top:4px!important}
+#smart .smart-brand-slot{flex:0 0 auto!important;background:#f6f9f5!important;border:1px solid #dbe5dd!important;box-shadow:none!important;color:#365d50!important;padding:7px 10px!important;min-width:95px!important;max-width:122px!important}
+#smart .smart-brand-caption,#smart .smart-brand-placeholder{color:#426858!important}
+#smart .prayer-panel{display:grid!important;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr)!important;grid-template-rows:auto auto minmax(154px,auto) auto auto!important;column-gap:12px!important;row-gap:11px!important;justify-content:initial!important;padding-bottom:21px!important;position:relative!important}
+#smart .prayer-panel .smart-head,#smart .prayer-panel .prayer-controls,#smart .prayer-panel .prayer-widget-footer,#smart .prayer-panel .prayer-month{grid-column:1/-1!important}
+#smart .prayer-controls{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) auto!important;gap:8px!important;align-items:end!important}
+#smart .prayer-controls .prayer-field{font-size:10px!important;gap:4px!important;color:#65776c!important}
+#smart .prayer-controls .prayer-select-wrap,#smart .prayer-controls .prayer-date-actions{min-width:0!important;height:40px!important;border:1px solid #dce5dd!important;background:#f8faf7!important;color:#21473b!important;border-radius:10px!important}
+#smart .prayer-controls select,#smart .prayer-controls input{color:#21473b!important;color-scheme:light!important;font-size:11px!important}
+#smart .prayer-controls .prayer-today{height:40px!important;background:#e5eee6!important;color:#245744!important;border-radius:10px!important;border:1px solid #d4e3d8!important;font-size:11px!important}
+#smart .prayer-countdown{grid-column:1!important;grid-row:3!important;min-width:0!important;min-height:150px!important;padding:17px 14px!important;border-radius:14px!important;background:radial-gradient(circle at 83% 10%,#789b7945,transparent 43%),linear-gradient(145deg,#174d40,#092e28)!important;position:relative!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;justify-content:center!important;border:0!important;color:white!important}
+#smart .prayer-countdown:after{content:"☾";font:72px/1 Georgia,serif;color:#eedc9a36;position:absolute;right:14px;top:7px;pointer-events:none}
+#smart .prayer-countdown-copy{position:relative;z-index:1}
+#smart .prayer-countdown .prayer-eyebrow{color:#edf3e7!important;font:600 12px/1.4 Inter,sans-serif!important}
+#smart .prayer-countdown #countdownDetail{font-size:10px!important;color:#c6d8ce!important;margin-top:6px!important}
+#smart .prayer-countdown #countdownTime{position:relative;z-index:1;font:700 clamp(24px,2.6vw,35px)/1.2 Inter,sans-serif!important;letter-spacing:-.035em!important;color:#fff!important;margin:11px 0 0!important}
+#smart .prayer-times{grid-column:2!important;grid-row:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:5px!important;margin:0!important;padding:0!important;border:0!important;min-width:0!important}
+#smart .prayer-times .prayer-time-item{display:flex!important;flex-direction:column!important;justify-content:center!important;gap:4px!important;align-items:center!important;text-align:center!important;border-radius:10px!important;background:#f1f5ef!important;border:1px solid #e4ebe4!important;color:#234b3e!important;padding:7px 4px!important;min-width:0!important}
+#smart .prayer-times .prayer-time-item.highlight{background:#f8ead4!important;border-color:#f0d7af!important;color:#664a20!important}
+#smart .prayer-times span{font:500 10px/1.2 Inter,sans-serif!important;color:inherit!important}
+#smart .prayer-times strong{font:700 15px/1.15 Inter,sans-serif!important;color:inherit!important}
+#smart .prayer-details-toggle{grid-column:1/-1!important;justify-self:start!important;margin:0!important;font-size:11px!important}
+#smart .prayer-extra{grid-column:1/-1!important}
+#smart .prayer-week{display:none!important} /* date picker remains available for all dates */
+#smart .prayer-widget-footer{position:static!important;inset:auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;margin:0!important;padding:5px 0 0!important;gap:10px!important;border-top:1px solid #e6eae3!important}
+#smart .prayer-widget-footer .prayer-month-trigger{margin:0!important;min-width:0!important;width:auto!important;min-height:36px!important;background:#215648!important;color:#fff!important;border:0!important;border-radius:999px!important;padding:8px 16px!important;font-size:11px!important}
+#smart .prayer-widget-footer #prayerStatus{color:#708176!important;font-size:10px!important;max-width:230px!important}
+#smart .prayer-month{color:#285247!important}
+#smart .quran-panel{display:flex!important;flex-direction:column!important;min-width:0!important}
+#smart .quran-panel .verse-content{display:grid!important;grid-template-columns:minmax(0,39%) minmax(0,1fr)!important;grid-template-rows:auto auto auto 1fr!important;column-gap:16px!important;row-gap:8px!important;position:relative!important;background:#f7f9f5!important;border:1px solid #e9eee7!important;border-radius:14px!important;padding:14px!important;flex:1 1 auto!important;min-height:205px!important;align-content:center!important}
+#smart .quran-panel .verse-content:before{content:"";grid-column:1;grid-row:1 / 5;display:block!important;border-radius:12px;background:radial-gradient(ellipse at 50% 86%,#d7b4778c,transparent 44%),linear-gradient(160deg,#154b3d,#1a5746 53%,#102f29);box-shadow:inset 0 0 35px #0a281b85;min-height:205px}
+#smart .quran-panel .verse-content:after{content:"☪";grid-column:1;grid-row:1 / 5;display:grid;place-items:center;font:100px Georgia,serif;color:#e4c784;pointer-events:none;text-shadow:0 5px 18px #112c2380}
+#smart .quran-panel .verse-top,#smart .quran-panel .verse-arabic,#smart .quran-panel .verse-translation,#smart .quran-panel .verse-reflection{grid-column:2!important;min-width:0!important}
+#smart .quran-panel .verse-top{grid-row:1!important;display:flex!important;align-items:center!important;gap:4px!important;flex-wrap:wrap!important}
+#smart .quran-panel #verseReference{font-size:11px!important;color:#386b57!important}
+#smart .quran-panel .verse-arabic{grid-row:2!important;font:400 clamp(23px,2.15vw,32px)/1.75 "Amiri","Noto Naskh Arabic",serif!important;max-height:108px!important;overflow:hidden!important;text-overflow:ellipsis!important;text-align:right!important;white-space:normal!important;padding:0!important;margin:0!important;color:#173d35!important}
+#smart .quran-panel .verse-translation{grid-row:3!important;font:400 12px/1.55 Inter,sans-serif!important;color:#51675c!important;display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical!important;overflow:hidden!important;margin:0!important}
+#smart .quran-panel .verse-reflection{grid-row:4!important;padding:9px 11px!important;border-radius:9px!important;background:#e4ede4!important;align-self:end!important}
+#smart .quran-panel .verse-reflection strong{font-size:11px!important}
+#smart .quran-panel .verse-reflection p{font-size:11px!important;line-height:1.45!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important;margin-top:3px!important}
+#smart .quran-panel .smart-bottom{margin-top:0!important;justify-content:flex-end!important}
+#smart .quran-panel .smart-bottom a{display:inline-flex!important;justify-content:center!important;align-items:center!important;min-width:0!important;width:auto!important;min-height:36px!important;padding:9px 19px!important;background:#215648!important;color:#fff!important;border:0!important;border-radius:999px!important;font-size:11px!important}
+#smart .quran-panel .verse-arrows{gap:3px!important}
+#smart .quran-panel .verse-arrows button{width:24px!important;height:24px!important}
+#smart .quran-panel #verseStatus{font-size:10px!important}
+@media(max-width:1100px) and (min-width:821px){#smart .prayer-controls{grid-template-columns:1fr 1fr!important}#smart .prayer-today{display:none!important}#smart .smart-grid>.glass-widget{padding:16px!important}#smart .quran-panel .verse-content{grid-template-columns:30% 1fr!important;gap:9px!important}}
+@media(max-width:820px){#smart .smart-grid{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"prayer" "quran"!important}#smart .smart-grid>.glass-widget{max-width:100%!important}#smart .prayer-panel{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;padding-bottom:18px!important}#smart .prayer-widget-footer{position:static!important}}
+@media(max-width:530px){#smart.smart-section{padding:52px 0 58px!important}#smart>.inner{width:min(92%,1340px)!important}#smart .smart-grid>.glass-widget{padding:15px!important}#smart .smart-head{min-height:0!important}#smart .smart-head h3{font-size:21px!important}#smart .smart-brand-slot{min-width:72px!important;max-width:83px!important;padding:5px!important}#smart .prayer-controls{grid-template-columns:1fr 1fr!important;gap:7px!important}#smart .prayer-today{display:none!important}#smart .prayer-countdown{min-height:142px!important}#smart .prayer-countdown #countdownTime{font-size:25px!important}#smart .prayer-times strong{font-size:13px!important}#smart .quran-panel .verse-content{grid-template-columns:1fr!important;min-height:0!important}#smart .quran-panel .verse-content:before,#smart .quran-panel .verse-content:after{display:none!important}#smart .quran-panel .verse-content>*{grid-column:1!important}#smart .quran-panel .verse-arabic{max-height:125px!important}}
+</style></head><body class="ramadan-tools-rework">
 
 <header id="siteHeader"><a class="brand" href="#journey" aria-label="Festival Ramadan — kembali ke atas"><span>Festival <em>Ramadan.</em></span></a><nav id="siteNav" aria-label="Navigasi utama"><a href="#smart">Imsakiyah</a><a href="#articles">Artikel</a><a href="#ramadan-tools">Kalkulator &amp; Menu</a><a href="#livestream">Live</a><a href="#videos">Video</a><a href="#mosques">Masjid</a><a href="#ramadan-activities">Aktivitas</a></nav><button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu nav-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-x nav-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></header>
 <main>
 <section class="journey" id="journey"><div class="sticky"><video id="hero" muted="muted" playsinline="" webkit-playsinline="" preload="auto" poster="ramadan-hero-poster.jpg" src="assets/ramadan-hero-scrub_xMEx.mp4" aria-label="Perjalanan visual Ramadan dari senja hingga kebersamaan" class="is-ready"></video><div class="shade"></div><div class="copy"><div class="hero-story scene-enter" id="heroStory" aria-live="off"><h1 id="headline"><span class="hero-line-primary"><span id="heroLinePrimary">Saat Senja</span> <em id="heroLineLast">Tiba,</em></span><span class="hero-line-accent" id="heroLineAccent">ada rindu yang kembali terasa. Ramadan datang membawa kenangan yang akrab.</span></h1></div></div><div class="hint" aria-label="Scroll untuk menjelajah"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-mouse" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="7"></rect><path class="scroll-wheel" d="M12 6v4"></path></svg><span>Scroll</span><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-down hint-chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></div></div></section>
-<section aria-labelledby="smartTitle" class="smart-section new-section" id="smart"><div class="inner"><div class="smart-intro"><span class="section-kicker">RAMADAN SMART</span><h2 id="smartTitle">Temani Setiap Langkah <em>Ramadan Anda</em></h2><p>Jadwal ibadah dan ayat pilihan untuk menemani Ramadan.</p></div><div class="smart-grid"><article aria-labelledby="prayerTitle" class="prayer-panel glass-widget">
+<section aria-labelledby="smartTitle" class="smart-section new-section" id="smart"><div class="inner"><div class="smart-intro"><span class="section-kicker">IBADAH & INSPIRASI</span><h2 id="smartTitle">Tools <em>Ramadan</em></h2><p>Temani ibadah Anda dengan informasi yang akurat dan inspiratif.</p></div><div class="smart-grid"><article aria-labelledby="prayerTitle" class="prayer-panel glass-widget">
 <div class="smart-head">
 
-<div><h3 id="prayerTitle">Jadwal Imsakiyah</h3><p>Waktu imsak dan salat berdasarkan kota pilihan.</p></div>
+<div><h3 id="prayerTitle">Jadwal Imsakiyah</h3><p>Lihat jadwal lengkap untuk kota Anda.</p></div>
 <div class="smart-brand-slot" data-brand-widget="prayer" data-logo-alt="" data-logo-src=""><span class="smart-brand-caption">Didukung oleh</span><span class="smart-brand-placeholder">Logo Brand</span><img alt="" class="smart-brand-image" hidden=""/></div>
 </div>
 <div class="prayer-controls">
